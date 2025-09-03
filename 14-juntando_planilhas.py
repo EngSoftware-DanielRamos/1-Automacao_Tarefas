@@ -18,4 +18,6 @@ for nome in lista_arquivos:
         for j in range(1, max_colunas+1):
             data = sheet.cell(row=i, column=j)
             ws.cell(row=i, column=j).value = data.value
+
+wb.remove(wb['sheet'])
 wb.save(nome_arquivo)
